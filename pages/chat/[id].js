@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { doc, getDoc, collection, orderBy, getDocs } from 'firebase/firestore';
 import firebase from '../../config/firebase';
 import FirebaseContext from '../../context/firebaseContext';
-import Sidebar from '../../components/Sidebar';
 import ChatScreen from '../../components/ChatScreen';
 import getRecipientEmail from '../../utils/getRecipientEmail';
 
@@ -18,7 +17,7 @@ const Chat = ({ chats, message }) => {
       <Head>
         <title>Chat whit {getRecipientEmail(chat?.users, user)}</title>
       </Head>
-      <Sidebar />
+
       <ChatContainer>
         <ChatScreen chats={chat} messages={messages} />
       </ChatContainer>

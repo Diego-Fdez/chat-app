@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Avatar, IconButton } from '@mui/material';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
@@ -129,6 +130,9 @@ const ChatScreen = ({ chats, messages }) => {
   return (
     <Container>
       <Header>
+        <IconButton>
+          <ArrowCircleLeftIcon type='button' onClick={() => router.push('/')} />
+        </IconButton>
         {recipient ? (
           <Avatar src={recipient?.photoURL} />
         ) : (
@@ -187,20 +191,28 @@ const ChatScreen = ({ chats, messages }) => {
 export default ChatScreen;
 
 const Container = styled.div`
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  position: relative; */
 `;
 
 const InputContainer = styled.form`
   display: flex;
-  width: 64%;
+  width: 95%;
+  margin: auto;
   align-items: center;
   padding: 10px;
   position: absolute;
   bottom: 1px;
   border: 1px solid #40b7ad;
   z-index: 100;
+
+  /* @media (max-width: 350px) {
+    width: 70%;
+  } */
+
+  @media (max-width: 1080px) {
+    width: 80%;
+  }
 `;
 
 const Input = styled.input`
@@ -241,6 +253,11 @@ const Header = styled.div`
   height: 80px;
   align-items: center;
   border-bottom: 1px solid whitesmoke;
+
+  SVG {
+    font-size: 40px;
+    margin-right: 10px;
+  }
 `;
 
 const HeaderInformation = styled.div`
