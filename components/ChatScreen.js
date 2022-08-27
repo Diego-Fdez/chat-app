@@ -130,8 +130,8 @@ const ChatScreen = ({ chats, messages }) => {
   return (
     <Container>
       <Header>
-        <IconButton>
-          <ArrowCircleLeftIcon type='button' onClick={() => router.push('/')} />
+        <IconButton type='button' onClick={() => router.push('/')}>
+          <ArrowCircleLeftIcon />
         </IconButton>
         {recipient ? (
           <Avatar src={recipient?.photoURL} />
@@ -205,10 +205,6 @@ const InputContainer = styled.form`
   bottom: 1px;
   border: 1px solid #40b7ad;
   z-index: 100;
-
-  /* @media (max-width: 350px) {
-    width: 70%;
-  } */
 
   @media (max-width: 1080px) {
     width: 80%;

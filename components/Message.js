@@ -33,6 +33,10 @@ const MessageElement = styled.p`
   padding-bottom: 26px;
   position: relative;
   text-align: right;
+
+  @media screen and (max-width: 768px) {
+    max-width: 200px;
+  }
 `;
 
 const Sender = styled(MessageElement)`
