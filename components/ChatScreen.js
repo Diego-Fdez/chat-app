@@ -187,24 +187,25 @@ const ChatScreen = ({ chats, messages }) => {
 export default ChatScreen;
 
 const Container = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  position: relative;
+  position: relative; */
 `;
 
 const InputContainer = styled.form`
   display: flex;
-  width: 93%;
+  width: 64%;
   align-items: center;
   padding: 10px;
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   border: 1px solid #40b7ad;
   z-index: 100;
 `;
 
 const Input = styled.input`
   flex: 1;
+  align-items: center;
   outline: 0;
   border: none;
   border-radius: 10px;
@@ -236,7 +237,7 @@ const Header = styled.div`
   z-index: 100;
   top: 0;
   display: flex;
-  padding: 11px;
+  padding: 15px;
   height: 80px;
   align-items: center;
   border-bottom: 1px solid whitesmoke;
@@ -259,7 +260,7 @@ const HeaderInformation = styled.div`
 const MessageContainer = styled.div`
   padding: 30px;
   background-color: #0d2036;
-  min-height: 78vh;
+  min-height: 90vh;
   overflow-y: scroll;
 
   ::-webkit-scrollbar {

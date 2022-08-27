@@ -6,7 +6,7 @@ import FirebaseContext from '../context/firebaseContext';
 const Message = ({ users, message }) => {
   const { user } = useContext(FirebaseContext);
 
-  const TypeOfMessage = users === user ? Sender : Receiver;
+  const TypeOfMessage = users === user.email ? Sender : Receiver;
 
   return (
     <Container>
@@ -38,7 +38,7 @@ const MessageElement = styled.p`
 const Sender = styled(MessageElement)`
   margin-left: auto;
   background-color: #dcf8c6;
-  color: #fff;
+  color: #202020;
 `;
 const Receiver = styled(MessageElement)`
   background-color: #ccc;

@@ -17,7 +17,7 @@ const Chat = ({ id, users }) => {
   const [recipientSnapshot] = useCollection(query);
 
   /* Getting the data from the firebase database. */
-  const recipient = recipientSnapshot?.docs?.[1]?.data();
+  const recipient = recipientSnapshot?.docs?.[0]?.data();
 
   /* Getting the email of the recipient. */
   const recipientEmail = getRecipientEmail(users, user);

@@ -63,7 +63,6 @@ export async function getServerSideProps(context) {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
 `;
 
 const ChatContainer = styled.div`
